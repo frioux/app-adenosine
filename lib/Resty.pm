@@ -37,8 +37,9 @@ sub new {
       my $query = '';
       $self->{verbose} = 0;
 
-      my $path   = shift @ARGV unless $ARGV[0] && $ARGV[0] =~ /^-/;
-      my $data   = shift @ARGV unless $ARGV[0] && $ARGV[0] =~ /^-/;
+      my ($path, $data);
+      $path   = shift @ARGV unless $ARGV[0] && $ARGV[0] =~ /^-/;
+      $data   = shift @ARGV unless $ARGV[0] && $ARGV[0] =~ /^-/;
 
       $path ||= '';
       $data ||= '';
